@@ -1,6 +1,11 @@
 class SessionsController < ApplicationController
+  def create
+    
+  end
 
-  def current_user
-    session[:name]
+  private
+
+  def require_login
+    return redirect_to '/' unless session.include? :name && session[:name]==""
   end
 end
