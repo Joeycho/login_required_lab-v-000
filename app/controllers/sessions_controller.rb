@@ -13,6 +13,7 @@ class SessionsController < ApplicationController
   private
 
   def require_login
+    binding.pry
     return redirect_to '/' if (!params.include? :name) || params[:name]==""
   end
 end
