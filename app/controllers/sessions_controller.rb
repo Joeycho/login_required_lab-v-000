@@ -6,6 +6,10 @@ class SessionsController < ApplicationController
     render :welcome
   end
 
+  def destroy
+    session[:name]=nil
+    redirect_to '/'
+  end
   private
 
   def require_login
