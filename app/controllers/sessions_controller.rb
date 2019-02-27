@@ -3,6 +3,7 @@ class SessionsController < ApplicationController
   before_action :require_login
   def create
     session[:name]=params[:name]
+    render :welcome
   end
 
   private
