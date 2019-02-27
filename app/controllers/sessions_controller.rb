@@ -1,5 +1,5 @@
 require 'pry'
-class SessionController < ApplicationController
+class SessionsController < ApplicationController
   before_action :require_login
   def create
     binding.pry
