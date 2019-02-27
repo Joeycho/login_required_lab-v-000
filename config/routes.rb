@@ -4,6 +4,8 @@ Rails.application.routes.draw do
 
   resources :secrets, only: [:show]
 
+  get 'secrets/show', to 'secrets#show'
+
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
