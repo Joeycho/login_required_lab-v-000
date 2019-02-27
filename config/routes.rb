@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   root 'sessions#new'
 
+  resources :secrets, only: [:show]
 
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
