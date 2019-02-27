@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root 'sessions#new'
   resources :sessions, only: [:create]
 #  post '/sessions/create', to: 'sessions#create'
-  post 'sessions/destroy', to: 'sessions#destroy'
+  post 'sessions/destroy'
   get 'secrets/show', to: 'secrets#show'
 
 
