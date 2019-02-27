@@ -4,9 +4,9 @@ class SecretsController < ApplicationController
     if session[:name]==nil
       redirect_to '/'
   end
-  
+
   private
- 
+
   def require_login
     return head(:forbidden) unless session.include? :name
   end
