@@ -1,7 +1,6 @@
-<h2> Login Form </h2>
+<h2> Welcome </h2>
 
-<%= form_for(@user) do |f| %>
+
   <label>User name:</label><br>
-  <%= f.text_field :name%><br>
+  <%=current_user%><br>
   <%= f.submit %>
-<% end %>
