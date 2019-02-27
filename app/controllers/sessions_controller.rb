@@ -1,6 +1,8 @@
+require 'pry'
 class SessionsController < ApplicationController
   before_action :require_login
   def create
+    binding.pry
     session[:name]=params[:name]
   end
 
