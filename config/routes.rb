@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   root 'sessions#new'
 
-  get 'secrets/show', to 'secrets#show'
+  get 'secrets/show', to: 'secrets#show'
 
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
