@@ -1,11 +1,7 @@
 class SecretsController < ApplicationController
   before_action :require_login
   def show
-    if session[:name]==nil
-      redirect_to '/'
-    else
-      render :show
-    end
+    render :show
   end
 
   private
