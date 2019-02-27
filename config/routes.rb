@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   root 'sessions#new'
+  resources :sessions, only: [:create]
   post '/sessions/create', to: 'sessions#create'
   get 'secrets/show', to: 'secrets#show'
 
