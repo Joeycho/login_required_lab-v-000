@@ -1,7 +1,7 @@
 require 'pry'
 class SessionsController < ApplicationController
   before_action :require_login
-  skip_before_action :require_login, only: [:create]
+#  skip_before_action :require_login, only: [:create]
   def create
     binding.pry
     session[:name]=params[:name]
@@ -11,6 +11,6 @@ class SessionsController < ApplicationController
 
   def require_login
     binding.pry
-    return redirect_to '/' unless params.include? :name && params[:name]==""
+    return redirect_to '/' if !params.include? :name || params[:name]==""
   end
 end
