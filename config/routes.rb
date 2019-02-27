@@ -2,8 +2,6 @@ Rails.application.routes.draw do
 
   root 'sessions#new'
 
-  resources :secrets, only: [:show]
-
   get 'secrets/show', to 'secrets#show'
 
 
