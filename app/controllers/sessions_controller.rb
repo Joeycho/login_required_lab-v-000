@@ -1,6 +1,7 @@
 require 'pry'
 class SessionsController < ApplicationController
   before_action :require_login
+  skip_before_action :require_login, only:[:destroy]
   def create
     session[:name]=params[:name]
     render :welcome
