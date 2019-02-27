@@ -9,6 +9,6 @@ class SessionsController < ApplicationController
   private
 
   def require_login
-    return redirect_to '/' unless session.include? :name && params[:name]==""
+    return redirect_to '/' unless session.include? :name
   end
 end
